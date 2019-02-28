@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Config>
+  <Param name="input" value="text"></Param>
+  <Param name="flutype" value="A"></Param>
+  <Param name="formatdb" value="formatdb"></Param>
+  <Param name="blastall" value="/opt/tools/classifier/ncbi-blast-2.2.22+/bin/legacy_blast.pl"></Param>
+  <Param name="blastpath" value="/opt/tools/classifier/ncbi-blast-2.2.22+/bin"></Param>
+  <Param name="blastdir" value="blastdb"></Param>
+  <Param name="DB_PLATFORM" value="Oracle"></Param>
+  <Param name="Type" value="H1N1NewPand"></Param>
+  <Param name="DB_NAME" value="NA"></Param>
+  <Param name="pplacer" value="/opt/tools/classifier/pplacer-v1.1.alpha13rc3-Linux-2.6.32"></Param>
+  <Param name="seg" value="seg8"></Param>
+  <Param name="serotype" value="H1N1"></Param>
+  <Param name="DB_USER" value="NA"></Param>
+  <Param name="DB_PASSWORD" value="NA"></Param>
+  <Param name="DB_HOST" value="NA"></Param>
+  <Param name="blastdb" value="H1N1NewPand.fasta"></Param>
+  <Param name="ClassifierDir" value="classifier"></Param>
+  <Param name="output" value="text"></Param>
+  <Param name="TempDir" value="/tmp"></Param>
+  <Param name="lookupfile" value="/var/www/html/classifier/blastdb/H1N1NewPand.cached"></Param>
+  <Param name="lengthsFile" value="/var/www/html/classifier/blastdb/H1N1NewPand.lengths"></Param>
+</Config>
