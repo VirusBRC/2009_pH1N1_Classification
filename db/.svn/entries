@@ -1,0 +1,40 @@
+10
+
+dir
+35437
+svn://brc-shared-file/Software/Main%20Trunk/AnalysisScripts/classifier/db
+svn://brc-shared-file
+
+
+
+2012-06-07T18:36:17.829796Z
+35214
+jwen
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+1541ce5a-508d-d340-a9c9-6d87185756a1
+
+DB_Handler.pm
+file
+
+
+
+
+
+b64ffbdb266b65760cd3da6715995fb4
+2012-06-07T18:36:17.829796Z
+35214
+jwen
+

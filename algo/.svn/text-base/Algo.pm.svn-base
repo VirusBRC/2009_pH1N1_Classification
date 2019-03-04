@@ -1,0 +1,65 @@
+package algo::Algo;
+
+use strict;
+use warnings;
+use util::blastf;
+use File::Basename;
+use util::Utils;
+
+
+
+sub new{
+    my $class = shift;
+    my $self = { @_ };
+    bless( $self,$class);
+    $self->_init;
+    return $self;
+}
+
+sub config {$_[0]->{config}}
+
+sub db_conn { $_[0]->{db_conn}} 
+
+
+#Initialize look up table for consistent hits. 
+# Hashvalue for lookup table is store in $self{"lookup"}
+#
+sub _init{
+
+    my $self = shift;
+
+    my $config = $self->{config};
+
+    my $db_conn = $self->{db_conn};
+    
+    my $hits = 3;
+    
+    if (defined $self->{"count"}){ 
+        $hits = $self->{"count"};
+    
+    }
+        
+    $self->{"lookup"} = \%{util::blastf::getLookupTable($config,$db_conn)};
+
+    $self->{"blastdb"} = "/opt/tools/classifier/".$config->getValue("blastdir")."/".$config->getValue("blastdb");
+
+    $self->{"blastall"} = $config->getValue("blastall")." -p blastn -m 8 -e 1 -F F -v $hits -b $hits -g F -d ".$self->{blastdb}." -i <INPUTFILE>";
+
+    $self->{"blastout"} = 0 unless defined $self->{"blastout"};
+
+}
+
+sub getLookup{
+    
+    my $self = shift;
+    my $accession = shift;
+
+    my %l = %{$self->{"lookup"}};
+
+    return $l{$accession};
+
+}
+
+
+sub getClassification{}
+1;
